@@ -1,0 +1,128 @@
+:root {
+  --bg: #0a0b0f;
+  --bg-gradient: radial-gradient(circle at top, #121524, var(--bg));
+
+  --card: rgba(255, 255, 255, 0.04);
+  --card-hover: rgba(255, 255, 255, 0.06);
+
+  --text: #f2f3f5;
+  --muted: rgba(255, 255, 255, 0.65);
+
+  --border: rgba(255, 255, 255, 0.10);
+  --border-hover: rgba(255, 255, 255, 0.18);
+
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+body {
+  background: var(--bg-gradient);
+  color: var(--text);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* HEADER */
+header {
+  padding: 90px 20px 45px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+}
+
+header p {
+  color: var(--muted);
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 920px;
+  margin: auto;
+  padding: 20px 20px 120px;
+}
+
+/* SECTIONS (GLASS CARDS PRO) */
+section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 16px;
+
+  -webkit-backdrop-filter: blur(14px);
+backdrop-filter: blur(14px);
+
+  box-shadow: var(--shadow);
+
+  transition: transform 0.25s ease, border 0.25s ease, background 0.25s ease;
+}
+
+section:hover {
+  transform: translateY(-3px);
+  border: 1px solid var(--border-hover);
+  background: var(--card-hover);
+}
+
+section h2 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+section p {
+  font-size: 14px;
+  color: var(--muted);
+  text-align: justify;
+  line-height: 1.75;
+  hyphens: auto;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 45px 10px;
+  color: var(--muted);
+  font-size: 12px;
+  border-top: 1px solid var(--border);
+}
+
+/* BOTÓN TOP (MODERNO) */
+.top-btn {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+  border: none;
+
+  padding: 10px 14px;
+  border-radius: 12px;
+
+  cursor: pointer;
+  font-weight: 600;
+
+  display: none;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.top-btn:hover {
+  transform: scale(1.08);
+}
